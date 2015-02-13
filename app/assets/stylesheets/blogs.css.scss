@@ -1,0 +1,95 @@
+// Place all the styles related to the Blogs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+h1 {
+	font: 36px arial;
+	color: #222;
+	/*
+	text-align: center;
+	padding: 35px;
+	*/
+}
+
+p {
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+
+}
+
+h2,h3 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+body {
+	background-color: #9966cb;
+}
+
+#info_cont {
+	background-color: white;
+	position: absolute;
+	top: 42.5%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 520px;
+	height: 300px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	border-radius: 20px;
+	-moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3), 0 5px 40px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3), 0 5px 40px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3), 0 5px 40px rgba(0, 0, 0, 0.3);
+
+}
+
+ul {
+	list-style-type: none;
+	margin-top: 0px;
+}
+
+li > a {
+	color: #8c1a71;
+	text-decoration: none;
+	line-height: 1.4;
+
+}
+li > a:hover {
+	color: #be80fc;
+}
+
+img {
+	width: 200px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+
+}
+
+#contact_title {
+	text-align: center;
+}
+
+#name_pic {
+	width: 50%;
+	float: left;
+	margin: 0 auto;
+}
+
+#content {
+	float:right;
+	width: 50%;
+}
+
+#myName {
+	text-align: center;
+}
+
+#python_projects {
+	text-align: center;
+}
