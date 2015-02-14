@@ -5,4 +5,9 @@ class PostsControllerTest < ActionController::TestCase
 	  get :home
 	  assert_response :success
 	end
+
+	test "get inde page" do
+		get :index
+		assert_response :success
+	end
 end
