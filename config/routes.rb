@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
-root 'blogs#home'
-get 'blogs/home'
+root 'posts#home'
+get 'posts/home'
+
+resources :posts
 end
