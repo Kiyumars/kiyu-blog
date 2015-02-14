@@ -1,7 +1,10 @@
 require 'test_helper'
 
 class BlogsControllerTest < ActionController::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  test "get home page" do
+	  get :home
+	  assert_response :boogie
+	end
+
 end
