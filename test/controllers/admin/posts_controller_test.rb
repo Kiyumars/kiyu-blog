@@ -1,7 +1,10 @@
 require 'test_helper'
 
 class Admin::PostsControllerTest < ActionController::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  test "get new post" do
+  	get :new
+  	assert_response :success
+  end
+
 end
