@@ -4,7 +4,9 @@ class BlogsControllerTest < ActionController::TestCase
 
   test "get home page" do
 	  get :home
-	  assert_response :boogie
+	  assert_response :success
 	end
+
+
 
 end
