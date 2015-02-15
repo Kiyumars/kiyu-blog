@@ -1,5 +1,9 @@
 
 	<%= form_for [:admin, @post] do |f| %>
+		<% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+		<%= render 'error_messages' %>
 		<%= f.label :title %>
 		<%= f.text_field :title, value: @post.title %>
 		<%= f.label :content %>

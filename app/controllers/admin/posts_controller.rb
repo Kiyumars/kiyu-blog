@@ -13,10 +13,11 @@ class Admin::PostsController < ApplicationController
 
 	def update
 		@post = Post.find(params[:id])
-		if @post.update_attributes!(safe_post_params)
-			flash[:success].now = "Post was updated"
+		if @post.update_attributes(safe_post_params)
+			flash.now[:success] = "Post was updated"
 			redirect_to edit_admin_post_path(params[:id])
 		else
+			flash.now[:danger] = "Post update was not valid"
 			render 'edit'
 		end
 	end
@@ -32,16 +33,16 @@ class Admin::PostsController < ApplicationController
 	def create
 		@post.new(safe_post_params)
 		if @post.save
-			flash[:success].now = "Post was created"
+			flash.now[:success] = "Post was created"
 			redirect_to edit_admin_post_path(params[:id])
 		else
-			flash[:danger].now = "Something was left out"
+			flash.now[:danger] = "Something was left out"
 			render 'create'
 		end
 	end
 
 	private
 		def safe_post_params
-			params.require(:post).require(:title, :content)
+			params.require(:post).permit(:title, :content)
 		end
 end
