@@ -6,7 +6,7 @@ class PostsControllerTest < ActionController::TestCase
 	  assert_response :success
 	end
 
-	test "get inde page" do
+	test "get index page" do
 		get :index
 		assert_response :success
 	end

@@ -1,9 +1,8 @@
-<div class="form">
+
 	<%= form_for [:admin, @post] do |f| %>
 		<%= f.label :title %>
-		<%= f.text_field :title, class: 'form-control' %>
+		<%= f.text_field :title, value: @post.title %>
 		<%= f.label :content %>
-		<%= f.text_area :content, class: 'form-control'%>
+		<%= f.text_area :content, value: @post.content %>
 		<%= submit_tag 'Submit blog post' %>
 	<%end%>
-</div>
