@@ -31,10 +31,10 @@ class Admin::PostsController < ApplicationController
 	end
 
 	def create
-		@post.new(safe_post_params)
+		@post = Post.new(safe_post_params)
 		if @post.save
 			flash.now[:success] = "Post was created"
-			redirect_to edit_admin_post_path(params[:id])
+			redirect_to edit_admin_post_path(@post.id)
 		else
 			flash.now[:danger] = "Something was left out"
 			render 'create'
@@ -50,6 +50,6 @@ class Admin::PostsController < ApplicationController
 
 	private
 		def safe_post_params
-			params.require(:post).permit(:title, :content)
+			params.require(:post).permit(:title, :content, :publish)
 		end
 end
