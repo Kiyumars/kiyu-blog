@@ -1,1 +1,11 @@
-<%= render @posts %>
+<h1>Unpublished Posts</h1>
+<% @unpublished_posts.each do |post| %>
+	<%= post.title %> 	<%= post.content %>
+				<%= link_to 'Edit or publish post', edit_admin_post_path(post.id) %><br>
+<%end%>
+
+<h1>Published Posts</h1>
+<% @published_posts.each do |post| %>
+	<%= post.title %> 	<%= post.content %>
+				<%= link_to 'Edit post', edit_admin_post_path(post.id) %><br>
+<%end%>

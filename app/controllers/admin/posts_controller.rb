@@ -3,7 +3,8 @@ class Admin::PostsController < ApplicationController
 	end
 
 	def index
-		@posts = Post.all
+		@unpublished_posts = Post.where(publish: false)
+		@published_posts = Post.where(publish: true)
 	end
 
 
