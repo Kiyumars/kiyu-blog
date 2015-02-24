@@ -8,5 +8,7 @@
 		<%= f.text_field :title, value: @post.title %>
 		<%= f.label :content %>
 		<%= f.text_area :content, value: @post.content %>
+		<%= f.label :publish %>
+		<%= f.check_box :publish %>
 		<%= submit_tag 'Submit blog post' %>
 	<%end%>
